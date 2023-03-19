@@ -56,3 +56,15 @@ button:hover {
 .key.used {
     background-color: #ccc;
 }
+
+.correct-letter {
+    color: green;
+}
+
+.incorrect-letter {
+    color: grey;
+}
+
+.correct-letter-wrong-position {
+    color: yellow;
+}
