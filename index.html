@@ -5,18 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordle Clone</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
 </head>
 <body>
-    <h1>Wordle Clone</h1>
-    <div class="game-container">
-        <input type="text" id="user-input" maxlength="5" placeholder="Enter your 5-letter guess">
-        <button id="submit-guess">Submit Guess</button>
-        <div id="guesses-container"></div>
-        <div id="keyboard-container">
-            <h2>Used Letters</h2>
-            <div id="keyboard"></div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+    <header>
+        <h1>Wordle Clone</h1>
+    </header>
+    <nav>
+        <!-- Add navigation items such as Home, High Scores, etc. -->
+    </nav>
+    <main>
+        <section class="game-container">
+            <div class="instructions">
+                <p>Guess the 5-letter word in six attempts or less.</p>
+            </div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Enter your guess" maxlength="5">
+                <button id="submit-guess">Submit</button>
+            </div>
+            <div class="attempts-container">
+                <!-- Guesses and results will be displayed here -->
+            </div>
+        </section>
+        <section class="stats-container">
+            <h2>Statistics</h2>
+            <!-- Add statistics related elements such as win rate, total games played, etc. -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Wordle Clone. All rights reserved.</p>
+    </footer>
 </body>
 </html>
