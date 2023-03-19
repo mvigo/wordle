@@ -27,3 +27,32 @@ button {
 button:hover {
     background-color: #3f9afc;
 }
+
+#keyboard-container {
+    margin-top: 30px;
+}
+
+#keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.key {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1 0 30px;
+    font-size: 1.2rem;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px;
+    text-align: center;
+    user-select: none;
+}
+
+.key.used {
+    background-color: #ccc;
+}
