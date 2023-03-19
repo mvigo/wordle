@@ -28,7 +28,7 @@ function submitGuess() {
     }
 
     let guessDisplay = document.createElement('div');
-    guessDisplay.innerHTML = guess + ' - ' + compareWords(guess, secretWord);
+    guessDisplay.innerHTML = coloredComparison(guess, secretWord);
     guessesContainer.appendChild(guessDisplay);
 
     attempts++;
@@ -60,6 +60,27 @@ function compareWords(guess, secretWord) {
         }
     }
     return comparison;
+}
+
+function coloredComparison(guess, secretWord) {
+    let comparison = compareWords(guess, secretWord);
+    let coloredSpans = '';
+
+    for (let i = 0; i < 5; i++) {
+        let spanClass = '';
+
+        if (comparison[i] === '◉') {
+            spanClass = 'correct-letter';
+        } else if (comparison[i] === '〇') {
+            spanClass = 'correct-letter-wrong-position';
+        } else {
+            spanClass = 'incorrect-letter';
+        }
+
+        coloredSpans += `<span class="${spanClass}">${guess[i]}</span>`;
+    }
+
+    return coloredSpans;
 }
 
 function updateUsedLetters() {
